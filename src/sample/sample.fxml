@@ -1,0 +1,1866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="1350.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="880.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <StackPane layoutX="14.0" layoutY="-28.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane fx:id="pn_Access" prefHeight="602.0" prefWidth="893.0" styleClass="Id" stylesheets="@New%20Text%20Document.css">
+               <children>
+                  <Button fx:id="btn_AcessID" layoutX="31.0" layoutY="71.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="71.0" prefWidth="162.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="IdentificationCard" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_AcessKebeleHouse" layoutX="31.0" layoutY="176.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="71.0" prefWidth="162.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Kebele House" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_AcessBirthCertificate" layoutX="31.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="71.0" prefWidth="162.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Birth Certificate" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_AcessOrganizing" layoutX="31.0" layoutY="465.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="71.0" prefWidth="162.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Organizing Unemployed" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_AcessMarrage" layoutX="31.0" layoutY="556.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="71.0" prefWidth="162.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Marrage Certificate" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_AcessUnemployedID" layoutX="31.0" layoutY="371.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="71.0" prefWidth="162.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Unemployed ID Card" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="IDimage" fitHeight="158.0" fitWidth="174.0" layoutX="1162.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageAcessBack" fitHeight="38.0" fitWidth="45.0" layoutX="20.0" layoutY="14.0" onMouseClicked="#backButon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pixlr-bg-result(1).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="OrganizeImage" fitHeight="158.0" fitWidth="174.0" layoutX="1162.0" layoutY="107.0" pickOnBounds="true" preserveRatio="true" />
+                  <AnchorPane fx:id="pn_tabel" layoutX="199.0" layoutY="42.0" prefHeight="600.0" prefWidth="806.0">
+                     <children>
+                        <AnchorPane fx:id="pn_tabel_KebelaHouse" prefHeight="259.0" prefWidth="907.0">
+                           <children>
+                              <Pane prefHeight="36.0" prefWidth="670.0">
+                                 <children>
+                                    <Label fx:id="lbl_kebele" layoutX="6.0" layoutY="8.0" prefHeight="31.0" prefWidth="307.0" styleClass="Id" stylesheets="@New%20Text%20Document.css" text="Kebele House" textFill="#fff0f0">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                 </children>
+                              </Pane>
+                              <TableView fx:id="tabel_KebeleHouse" layoutX="4.0" layoutY="48.0" prefHeight="237.0" prefWidth="947.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="-44.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_Kfathername" prefWidth="74.0" text="FatherN" />
+                                    <TableColumn fx:id="col_Kmothername" prefWidth="60.0" text="MotherN" />
+                                    <TableColumn fx:id="col_Khousenumber" prefWidth="70.0" text="HouseNum" />
+                                    <TableColumn fx:id="col_Kamonutroom" minWidth="7.0" prefWidth="65.0" text="AmountR" />
+                                    <TableColumn fx:id="col_Ksurfacearea" minWidth="2.0" prefWidth="64.0" text="SurfaceA" />
+                                    <TableColumn fx:id="col_khouseloc" minWidth="0.0" prefWidth="59.0" text="HouseL" />
+                                    <TableColumn fx:id="col_Kwindowamonut" minWidth="0.0" text="WindowA" />
+                                    <TableColumn fx:id="col_Kwindowtype" prefWidth="60.0" text="WindowT" />
+                                    <TableColumn fx:id="col_Kdoortype" prefWidth="56.0" text="DoorT" />
+                                    <TableColumn fx:id="col_kebeleHousenumber" prefWidth="57.0" text="KeHou" />
+                                    <TableColumn fx:id="col_Kchildname" prefWidth="73.0" text="ChildN" />
+                                    <TableColumn fx:id="col_Kchildgender" prefWidth="54.0" text="ChildSex" />
+                                    <TableColumn fx:id="col_Kchildage" prefWidth="41.0" text="CAge" />
+                                    <TableColumn fx:id="col_Kchildcarrier" prefWidth="73.0" text="ChildCarr" />
+                                    <TableColumn fx:id="col_Kchildatatus" prefWidth="58.0" text="ChildSts" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="SearchKebele" layoutX="314.0" prefHeight="38.0" prefWidth="355.0" promptText="Search here" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pn_tabel_unemployed" layoutY="-1.0" prefHeight="249.0" prefWidth="686.0" AnchorPane.bottomAnchor="312.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Pane prefHeight="36.0" prefWidth="670.0">
+                                 <children>
+                                    <Label layoutX="6.0" layoutY="8.0" prefHeight="31.0" prefWidth="307.0" styleClass="Id" stylesheets="@New%20Text%20Document.css" text="Unemployed ID Card" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                 </children>
+                              </Pane>
+                              <TableView fx:id="tabel_unemployed" layoutX="4.0" layoutY="48.0" prefHeight="237.0" prefWidth="947.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="-19.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_Ufirstname" prefWidth="75.0" text="FirstName" />
+                                    <TableColumn fx:id="col_Umiddlename" prefWidth="83.0" text="MiddleName" />
+                                    <TableColumn fx:id="col_Ulastname" prefWidth="75.0" text="LastName" />
+                                    <TableColumn fx:id="col_Usex" prefWidth="44.0" text="Sex" />
+                                    <TableColumn fx:id="col_Uphonenumber" prefWidth="71.0" text="PhoneNum" />
+                                    <TableColumn fx:id="col_UresidentAddress" prefWidth="82.0" text="ResisdentAd" />
+                                    <TableColumn fx:id="col_Unationality" prefWidth="73.0" text="Nationality" />
+                                    <TableColumn fx:id="col_Ubirthplace" prefWidth="75.0" text="Birthplace" />
+                                    <TableColumn fx:id="col_Ucity" prefWidth="61.0" text="City" />
+                                    <TableColumn fx:id="col_Uzone" prefWidth="57.0" text="Zone" />
+                                    <TableColumn fx:id="col_Uwereda" prefWidth="70.0" text="Wereda" />
+                                    <TableColumn fx:id="col_Ukebele" prefWidth="76.0" text="Kebele" />
+                                    <TableColumn fx:id="col_Ulevelofeducation" prefWidth="104.0" text="LevelOfEducation" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="searchUnemployed" layoutX="314.0" prefHeight="38.0" prefWidth="355.0" promptText="Search here" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pn_tabel_House" layoutX="-6.0" layoutY="306.0" prefHeight="288.0" prefWidth="913.0">
+                           <children>
+                              <Pane layoutX="14.0" layoutY="14.0" prefHeight="51.0" prefWidth="677.0">
+                                 <children>
+                                    <Label fx:id="lbl_house" layoutY="9.0" prefHeight="31.0" prefWidth="307.0" styleClass="Id" stylesheets="@New%20Text%20Document.css" text="House" textFill="#fffefe">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="search_House" layoutX="310.0" layoutY="5.0" prefHeight="38.0" prefWidth="367.0" promptText="Search here" />
+                                 </children>
+                              </Pane>
+                              <TableView fx:id="tabel_House" layoutX="14.0" layoutY="65.0" prefHeight="210.0" prefWidth="947.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="-48.0">
+                                <columns>
+                                  <TableColumn fx:id="col_HFatherName" prefWidth="138.0" text="FatherName" />
+                                  <TableColumn fx:id="col_HMotherName" prefWidth="112.0" text="MotherName" />
+                                    <TableColumn fx:id="col_HhouseNumber" prefWidth="126.0" text="HouseNumber" />
+                                    <TableColumn fx:id="col_HfilesubmissionDate" prefWidth="121.0" text="File Sub Date" />
+                                    <TableColumn fx:id="col_HhousePhoneNumber" minWidth="0.0" prefWidth="176.0" text="House PhoneNumber" />
+                                    <TableColumn fx:id="col_HchildrenName" minWidth="1.0" prefWidth="143.0" text="Child Name" />
+                                    <TableColumn fx:id="col_Hgender" prefWidth="75.0" text="Gender" />
+                                    <TableColumn fx:id="col_Hage" minWidth="0.0" prefWidth="55.0" text="Age" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pn_tabel_id" prefHeight="288.0" prefWidth="932.0">
+                           <children>
+                              <Pane prefHeight="36.0" prefWidth="670.0">
+                                 <children>
+                                    <Label fx:id="lbl_id" layoutX="6.0" layoutY="8.0" prefHeight="31.0" prefWidth="307.0" styleClass="Id" stylesheets="@New%20Text%20Document.css" text="IdentificationCard" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                 </children>
+                              </Pane>
+                              <TableView fx:id="tabel_Id" layoutX="4.0" layoutY="48.0" prefHeight="237.0" prefWidth="947.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="-19.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_IDresident" prefWidth="69.0" text="RegNum" />
+                                    <TableColumn fx:id="col_IDfirstname" prefWidth="51.0" text="FirstN" />
+                                    <TableColumn fx:id="col_IDmiddlename" prefWidth="61.0" text="MiddleN" />
+                                    <TableColumn fx:id="col_IDlastname" minWidth="0.0" prefWidth="52.0" text="LastN" />
+                                    <TableColumn fx:id="col_IDidnumber" minWidth="2.0" prefWidth="39.0" text="IdN" />
+                                    <TableColumn fx:id="col_IDdateofbirth" minWidth="9.0" prefWidth="51.0" text="Bday" />
+                                    <TableColumn fx:id="col_IDbloodgroup" prefWidth="53.0" text="BloodG" />
+                                    <TableColumn fx:id="col_IDsex" prefWidth="48.0" text="Sex" />
+                                    <TableColumn fx:id="col_IDissuedate" minWidth="9.0" prefWidth="54.0" text="Issue D" />
+                                    <TableColumn fx:id="col_IDexpiredate" prefWidth="61.0" text="ExpireD" />
+                                    <TableColumn fx:id="col_IDressidentadress" prefWidth="81.0" text="Resident Add" />
+                                    <TableColumn fx:id="col_IDphonenumber" prefWidth="63.0" text="Phone N" />
+                                    <TableColumn fx:id="col_IDhousenumber" prefWidth="54.0" text="House N" />
+                                    <TableColumn fx:id="col_IDemgfirst" prefWidth="52.0" text="EmgF" />
+                                    <TableColumn fx:id="col_IDemgmiddle" prefWidth="56.0" text="EmgM" />
+                                    <TableColumn fx:id="col_IDemglast" prefWidth="44.0" text="EmgL" />
+                                    <TableColumn fx:id="col_IDemgnum" prefWidth="55.0" text="EmgN" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="searchID" layoutX="314.0" prefHeight="38.0" prefWidth="355.0" promptText="Search here" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pn_tabel_BirthCeriteficate" prefHeight="288.0" prefWidth="956.0" AnchorPane.bottomAnchor="312.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-24.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Pane prefHeight="36.0" prefWidth="670.0">
+                                 <children>
+                                    <Label fx:id="lbl_birthCertificate" layoutX="6.0" layoutY="8.0" prefHeight="31.0" prefWidth="307.0" styleClass="Id" stylesheets="@New%20Text%20Document.css" text="Birth Certificate" textFill="#fffdfd">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                 </children>
+                              </Pane>
+                              <TableView fx:id="tabel_BirthCerteficate" layoutX="4.0" layoutY="48.0" prefHeight="237.0" prefWidth="947.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="5.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_Bchildname" prefWidth="75.0" text="ChildN" />
+                                    <TableColumn fx:id="col_Bfathername" prefWidth="66.0" text="FatherN" />
+                                    <TableColumn fx:id="col_Bgrandfname" prefWidth="65.0" text="GrandFN" />
+                                    <TableColumn fx:id="col_Bgender" minWidth="1.0" prefWidth="46.0" text="Sex" />
+                                    <TableColumn fx:id="col_Bbirthday" prefWidth="53.0" text="BDay" />
+                                    <TableColumn fx:id="col_Bbirthplace" prefWidth="56.0" text="BirthP" />
+                                    <TableColumn fx:id="col_Bnationality" prefWidth="64.0" text="Nat" />
+                                    <TableColumn fx:id="col_Bmotherfullname" prefWidth="67.0" text="Mother NE" />
+                                    <TableColumn fx:id="col_Bmothernationality" prefWidth="75.0" text="Mother Nat" />
+                                    <TableColumn fx:id="col_Bfatherfullname" prefWidth="72.0" text="FatherNE" />
+                                    <TableColumn fx:id="col_BfatherNationality" prefWidth="68.0" text="FatherNat" />
+                                    <TableColumn fx:id="col_Bbdayregnum" prefWidth="61.0" text="Regestor" />
+                                    <TableColumn fx:id="col_Bdayfilenum" prefWidth="55.0" text="FileN" />
+                                    <TableColumn fx:id="col_BCerteficate" prefWidth="66.0" text="Certeficate" />
+                                    <TableColumn fx:id="col_BdayregsterUnique" prefWidth="57.0" text="BDayReg" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="searchBirth" layoutX="314.0" prefHeight="38.0" prefWidth="355.0" promptText="Search here" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pn_tabel_marrage" prefHeight="288.0" prefWidth="932.0" AnchorPane.bottomAnchor="312.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Pane prefHeight="36.0" prefWidth="670.0">
+                                 <children>
+                                    <Label fx:id="lbl_marrage" layoutX="6.0" layoutY="8.0" prefHeight="31.0" prefWidth="307.0" styleClass="Id" stylesheets="@New%20Text%20Document.css" text="Marrage Certificate" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                 </children>
+                              </Pane>
+                              <TableView fx:id="tabel_Marrage" layoutX="4.0" layoutY="48.0" prefHeight="237.0" prefWidth="947.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="-19.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_Mhusbund" prefWidth="120.0" text="HusbandName" />
+                                    <TableColumn fx:id="col_Mwifename" prefWidth="115.0" text="WifeName" />
+                                    <TableColumn fx:id="col_Mmonth" prefWidth="70.0" text="Month" />
+                                    <TableColumn fx:id="col_Mday" prefWidth="53.0" text="Day" />
+                                    <TableColumn fx:id="col_Myear" prefWidth="66.0" text="Year" />
+                                    <TableColumn fx:id="col_Massigner" prefWidth="130.0" text="Assigner Name" />
+                                    <TableColumn fx:id="col_Mplace" prefWidth="126.0" text="Place" />
+                                    <TableColumn fx:id="col_Mfirstwitness" minWidth="0.0" prefWidth="130.0" text="FirstWitness" />
+                                    <TableColumn fx:id="col_Msecondwitness" prefWidth="135.0" text="SecondWitness" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="searchMarrage" layoutX="314.0" prefHeight="38.0" prefWidth="355.0" promptText="Search here" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="pn_tabel_organize" prefHeight="249.0" prefWidth="806.0" stylesheets="@New%20Text%20Document.css" AnchorPane.bottomAnchor="312.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Pane prefHeight="36.0" prefWidth="670.0">
+                                 <children>
+                                    <Label fx:id="lbl_organizing" layoutX="6.0" layoutY="8.0" prefHeight="31.0" prefWidth="307.0" styleClass="Id" stylesheets="@New%20Text%20Document.css" text="Organizing Unemployed" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font></Label>
+                                 </children>
+                              </Pane>
+                              <TableView fx:id="tabel_organize" layoutX="4.0" layoutY="48.0" prefHeight="237.0" prefWidth="947.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="-19.0">
+                                 <columns>
+                                    <TableColumn fx:id="col_orgFullName" prefWidth="243.0" text="FullName" />
+                                    <TableColumn fx:id="col_orgTypeOfWork" minWidth="2.0" prefWidth="293.0" text="TypeOfWork" />
+                                    <TableColumn fx:id="col_orgWorkingLocation" prefWidth="248.0" text="WorkingLocation" />
+                                    <TableColumn fx:id="col_orgAmountofcapital" prefWidth="162.0" text="AmountOfCapital" />
+                                 </columns>
+                              </TableView>
+                              <TextField fx:id="search_Organize" layoutX="314.0" prefHeight="38.0" prefWidth="355.0" promptText="Search here" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+            <AnchorPane fx:id="pn_unemployed" prefHeight="600.0" prefWidth="800.0" styleClass="Id" stylesheets="@New%20Text%20Document.css">
+               <children>
+                  <TextField fx:id="txt_Fname" layoutX="191.0" layoutY="250.0" promptText="First Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btn_choose1" layoutX="70.0" layoutY="214.0" mnemonicParsing="false" onMouseClicked="#handleButton" style="-fx-background-color: #2752e6;" text="Choose User  Photo" textFill="WHITE" />
+                  <TextField fx:id="txt_Mname" layoutX="548.0" layoutY="254.0" promptText="Middle Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_Lname" layoutX="946.0" layoutY="258.0" promptText="Last Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="194.0" layoutY="332.0" prefHeight="21.0" prefWidth="36.0" text="Sex" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="rdomaleUnemploy" layoutX="269.0" layoutY="335.0" mnemonicParsing="false" text="Male" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="choose1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdofemaleUnemployed" layoutX="369.0" layoutY="335.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$choose1">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </RadioButton>
+                  <ImageView fx:id="img_unemployed" fitHeight="150.0" fitWidth="200.0" layoutX="30.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true" />
+                  <TextField fx:id="txt_Pnumber" layoutX="548.0" layoutY="328.0" promptText="Phone Number" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_Raddress" layoutX="946.0" layoutY="325.0" promptText="Resident Address" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_Nationality" layoutX="191.0" layoutY="387.0" promptText="Nationality" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_Bplace" layoutX="549.0" layoutY="387.0" prefHeight="40.0" prefWidth="213.0" promptText="Birth Place" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_City" layoutX="946.0" layoutY="387.0" prefHeight="40.0" prefWidth="211.0" promptText="City" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_Zone" layoutX="194.0" layoutY="482.0" prefHeight="40.0" prefWidth="211.0" promptText="Zone" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_Wereda" layoutX="552.0" layoutY="471.0" prefHeight="40.0" prefWidth="211.0" promptText="Wereda" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_Kebele" layoutX="946.0" layoutY="462.0" prefHeight="40.0" prefWidth="213.0" promptText="Kebele" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="422.0" layoutY="553.0" prefHeight="30.0" prefWidth="150.0" text="Level Of Education" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="RdoPrimary" layoutX="593.0" layoutY="558.0" mnemonicParsing="false" text=" Primary" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="levelGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="RdoSecondary" layoutX="743.0" layoutY="558.0" mnemonicParsing="false" text="Secondary" textFill="WHITE" toggleGroup="$levelGroup">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="RdoTertiary" layoutX="593.0" layoutY="605.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="96.0" text="Tertiary" textFill="WHITE" toggleGroup="$levelGroup">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="RdoAbove" layoutX="743.0" layoutY="604.0" mnemonicParsing="false" text="Above" textFill="WHITE" toggleGroup="$levelGroup">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </RadioButton>
+                  <Button fx:id="btn_submit" layoutX="1190.0" layoutY="568.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="35.0" prefWidth="122.0" styleClass="Enter" stylesheets="@New%20Text%20Document.css" text="Submit">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="488.0" layoutY="48.0" prefHeight="44.0" prefWidth="244.0" text="Unemployed ID Card" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="img_back5" fitHeight="34.0" fitWidth="35.0" layoutX="16.0" layoutY="17.0" onMouseClicked="#backButon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pixlr-bg-result(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbl_errorUnemployed" layoutX="872.0" layoutY="565.0" prefHeight="38.0" prefWidth="307.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pn_merriageCertificate" prefHeight="200.0" prefWidth="200.0" styleClass="Id" stylesheets="@New%20Text%20Document.css">
+               <children>
+                  <Label layoutX="555.0" layoutY="35.0" prefHeight="50.0" prefWidth="307.0" text="MARRIAGE CERTIFICATE" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_hasbund" layoutX="317.0" layoutY="196.0" prefHeight="33.0" prefWidth="277.0" promptText="Husband Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_wife" layoutX="806.0" layoutY="196.0" prefHeight="33.0" prefWidth="264.0" promptText="Wife Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <Label layoutX="594.0" layoutY="122.0" prefHeight="32.0" prefWidth="220.0" text="This is to certify that" textFill="WHITE">
+                     <font>
+                        <Font name="Book Antiqua Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="686.0" layoutY="203.0" prefHeight="26.0" prefWidth="36.0" text="And" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="314.0" layoutY="291.0" prefHeight="26.0" prefWidth="142.0" text="We Wed on the  " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_month" layoutX="456.0" layoutY="284.0" prefHeight="33.0" prefWidth="121.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <Label layoutX="604.0" layoutY="291.0" prefHeight="26.0" prefWidth="75.0" text="Day of" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_day" layoutX="680.0" layoutY="284.0" prefHeight="33.0" prefWidth="84.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <Label layoutX="798.0" layoutY="291.0" prefHeight="26.0" prefWidth="108.0" text="In The Year" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_year" layoutX="917.0" layoutY="284.0" prefHeight="33.0" prefWidth="99.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <Label layoutX="490.0" layoutY="376.0" prefHeight="26.0" prefWidth="45.0" text="By :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_by" layoutX="570.0" layoutY="369.0" prefHeight="33.0" prefWidth="277.0" promptText="Assigner" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <Label layoutX="490.0" layoutY="443.0" prefHeight="26.0" prefWidth="45.0" text="At :" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_at" layoutX="570.0" layoutY="436.0" prefHeight="33.0" prefWidth="277.0" promptText="Location" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_witness1" layoutX="523.0" layoutY="502.0" prefHeight="33.0" prefWidth="174.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_witness2" layoutX="806.0" layoutY="498.0" prefHeight="33.0" prefWidth="174.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <Label layoutX="594.0" layoutY="555.0" prefHeight="26.0" prefWidth="75.0" text="Witness" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="847.0" layoutY="555.0" prefHeight="26.0" prefWidth="75.0" text="Witness" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_submitMarriage" layoutX="697.0" layoutY="581.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="36.0" prefWidth="108.0" styleClass="Enter" stylesheets="@New%20Text%20Document.css" text="Submit">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="img_backId7" fitHeight="34.0" fitWidth="35.0" layoutX="24.0" layoutY="18.0" onMouseClicked="#backButon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pixlr-bg-result(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbl_errorMarriage" layoutX="403.0" layoutY="581.0" prefHeight="38.0" prefWidth="277.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Label>
+               </children></AnchorPane>
+            <AnchorPane fx:id="pn_organizing" prefHeight="200.0" prefWidth="200.0" styleClass="Id" stylesheets="@New%20Text%20Document.css">
+               <children>
+                  <Label layoutX="526.0" layoutY="15.0" prefHeight="44.0" prefWidth="384.0" text="Organizing  Unemployed  To 5" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="27.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_typeWork1" layoutX="445.0" layoutY="69.0" prefHeight="40.0" prefWidth="242.0" promptText="Type Of Work" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="445.0" AnchorPane.rightAnchor="663.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_loc1" layoutX="776.0" layoutY="67.0" prefHeight="40.0" prefWidth="211.0" promptText="Working Location" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="776.0" AnchorPane.rightAnchor="363.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_fullname1" layoutX="163.0" layoutY="70.0" prefHeight="33.0" prefWidth="244.0" promptText="Full Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="167.0" AnchorPane.rightAnchor="941.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fx:id="image_Un1" fitHeight="82.0" fitWidth="156.0" layoutX="10.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btn_chooseQR2" layoutX="19.0" layoutY="236.0" mnemonicParsing="false" onMouseClicked="#handleButton" style="-fx-background-color: #2752e6;" text="Choose User  QR Image" textFill="WHITE" AnchorPane.topAnchor="236.0" />
+                  <Button fx:id="btn_chooseQR3" layoutX="18.0" layoutY="351.0" mnemonicParsing="false" onMouseClicked="#handleButton" style="-fx-background-color: #2752e6;" text="Choose User  QR Image" textFill="WHITE" AnchorPane.topAnchor="351.0" />
+                  <TextField fx:id="txt_fullname2" layoutX="167.0" layoutY="174.0" prefHeight="33.0" prefWidth="244.0" promptText="Full Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="167.0" AnchorPane.rightAnchor="941.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btn_chooseQR1" layoutX="18.0" layoutY="126.0" mnemonicParsing="false" onMouseClicked="#handleButton" style="-fx-background-color: #2752e6;" text="Choose User  QR Image" textFill="WHITE" AnchorPane.topAnchor="124.0" />
+                  <Button fx:id="btn_chooseQR4" layoutX="17.0" layoutY="478.0" mnemonicParsing="false" onMouseClicked="#handleButton" style="-fx-background-color: #2752e6;" text="Choose User  QR Image" textFill="WHITE" AnchorPane.topAnchor="478.0" />
+                  <TextField fx:id="txt_fullname3" layoutX="167.0" layoutY="288.0" prefHeight="33.0" prefWidth="244.0" promptText="Full Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="167.0" AnchorPane.rightAnchor="941.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_fullname4" layoutX="164.0" layoutY="411.0" prefHeight="33.0" prefWidth="255.0" promptText="Full Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="167.0" AnchorPane.rightAnchor="941.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="btn_SubMit" layoutX="1197.0" layoutY="593.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="38.0" prefWidth="130.0" styleClass="Enter" stylesheets="@New%20Text%20Document.css" text="Submit">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="img_back6" fitHeight="34.0" fitWidth="35.0" layoutX="18.0" layoutY="2.0" onMouseClicked="#backButon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pixlr-bg-result(1).png" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txt_capital1" layoutX="1074.0" layoutY="70.0" prefHeight="33.0" prefWidth="199.0" promptText="Capital (Birr)" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="1074.0" AnchorPane.rightAnchor="77.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lbl_errorOrg" layoutX="785.0" layoutY="593.0" prefHeight="36.0" prefWidth="355.0" />
+                  <ImageView fx:id="image_Un4" fitHeight="82.0" fitWidth="156.0" layoutX="9.0" layoutY="390.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="image_Un2" fitHeight="82.0" fitWidth="162.0" layoutX="9.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="153.0" />
+                  <ImageView fx:id="image_Un3" fitHeight="82.0" fitWidth="162.0" layoutX="12.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="267.0" />
+                  <TextField fx:id="txt_typeWork2" layoutX="444.0" layoutY="174.0" prefHeight="40.0" prefWidth="242.0" promptText="Type Of Work" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="444.0" AnchorPane.rightAnchor="664.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_loc2" layoutX="776.0" layoutY="166.0" prefHeight="40.0" prefWidth="211.0" promptText="Working Location" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="776.0" AnchorPane.rightAnchor="363.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_capital2" layoutX="1070.0" layoutY="170.0" prefHeight="33.0" prefWidth="207.0" promptText="Capital (Birr)" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="1070.0" AnchorPane.rightAnchor="73.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_typeWork3" layoutX="444.0" layoutY="288.0" prefHeight="40.0" prefWidth="242.0" promptText="Type Of Work" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="444.0" AnchorPane.rightAnchor="664.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_loc3" layoutX="776.0" layoutY="286.0" prefHeight="33.0" prefWidth="211.0" promptText="Working Location" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="776.0" AnchorPane.rightAnchor="363.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_capital3" layoutX="1072.0" layoutY="288.0" prefHeight="40.0" prefWidth="207.0" promptText="Capital (Birr)" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="1072.0" AnchorPane.rightAnchor="71.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_typeWork4" layoutX="440.0" layoutY="404.0" prefHeight="40.0" prefWidth="252.0" promptText="Type Of Work" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="440.0" AnchorPane.rightAnchor="658.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_loc4" layoutX="777.0" layoutY="404.0" prefHeight="40.0" prefWidth="213.0" promptText="Working Location" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="777.0" AnchorPane.rightAnchor="360.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_capital4" layoutX="1076.0" layoutY="404.0" prefHeight="33.0" prefWidth="207.0" promptText="Capital (Birr)" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="1076.0" AnchorPane.rightAnchor="67.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <ImageView fx:id="image_Un5" fitHeight="82.0" fitWidth="156.0" layoutX="9.0" layoutY="516.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="43.0" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="1185.0" AnchorPane.topAnchor="516.0" />
+                  <Button fx:id="btn_chooseQR5" layoutX="16.0" layoutY="598.0" mnemonicParsing="false" onMouseClicked="#handleButton" style="-fx-background-color: #2770e6;" text="Choose User  QR Image" textFill="WHITE" />
+                  <TextField fx:id="txt_fullname5" layoutX="167.0" layoutY="533.0" prefHeight="33.0" prefWidth="255.0" promptText="Full Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="167.0" AnchorPane.rightAnchor="941.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_typeWork5" layoutX="440.0" layoutY="533.0" prefHeight="33.0" prefWidth="252.0" promptText="Type Of Work" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="440.0" AnchorPane.rightAnchor="658.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_loc5" layoutX="773.0" layoutY="533.0" prefHeight="40.0" prefWidth="220.0" promptText="Working Location" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="773.0" AnchorPane.rightAnchor="357.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_capital5" layoutX="1074.0" layoutY="533.0" prefHeight="40.0" prefWidth="211.0" promptText="Capital (Birr)" styleClass="IdText" stylesheets="@New%20Text%20Document.css" AnchorPane.leftAnchor="1074.0" AnchorPane.rightAnchor="65.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pn_form" layoutX="10.0" layoutY="10.0" prefHeight="600.0" prefWidth="800.0" styleClass="KebeleForm" stylesheets="@New%20Text%20Document.css">
+               <children>
+                  <Button fx:id="btn_id" layoutX="383.0" layoutY="122.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="123.0" prefWidth="220.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Identification Card" textFill="#2f0086">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Label alignment="CENTER" layoutX="481.0" layoutY="25.0" prefHeight="51.0" prefWidth="336.0" text="Kebele Activities" textFill="#fcfef9">
+                     <font>
+                        <Font size="32.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_unemployed" layoutX="54.0" layoutY="379.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="132.0" prefWidth="220.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Unemployed ID Card">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_kebelehouse" layoutX="732.0" layoutY="122.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="123.0" prefWidth="220.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Kebele House">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_birth" layoutX="1063.0" layoutY="122.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="123.0" prefWidth="220.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Birth Certificate ">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_organizing" layoutX="718.0" layoutY="379.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="132.0" prefWidth="220.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Organizing  Unemployed" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_marriage" layoutX="383.0" layoutY="379.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="132.0" prefWidth="220.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Marriage Certificate" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_logout" layoutX="1167.0" layoutY="561.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="44.0" prefWidth="133.0" styleClass="Enter" stylesheets="@New%20Text%20Document.css" text="Logout">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_access" layoutX="1069.0" layoutY="395.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="91.0" prefWidth="220.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="Access File">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_house" layoutX="54.0" layoutY="122.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="123.0" prefWidth="220.0" styleClass="KebeleButton" stylesheets="@New%20Text%20Document.css" text="House" textFill="#2f0086">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pn_kebeleHouse" prefHeight="600.0" prefWidth="800.0" styleClass="Id" stylesheets="@New%20Text%20Document.css">
+               <children>
+                  <Label alignment="CENTER" layoutX="539.0" layoutY="30.0" prefHeight="51.0" prefWidth="301.0" text="Kebele House" textFill="WHITE">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_fatherFullName" layoutX="407.0" layoutY="146.0" prefHeight="38.0" prefWidth="244.0" promptText="Father Full Name" styleClass="Housetext" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="610.0" layoutY="298.0" prefHeight="27.0" prefWidth="175.0" text="House Condition" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="351.0" layoutY="363.0" prefHeight="25.0" prefWidth="133.0" text="Window Amount" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="356.0" layoutY="422.0" prefHeight="26.0" prefWidth="122.0" text="Window Type" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="358.0" layoutY="481.0" prefHeight="17.0" prefWidth="99.0" text="Door Type" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="620.0" layoutY="107.0" prefHeight="25.0" prefWidth="133.0" text="Family Status" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn_next" layoutX="1094.0" layoutY="555.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="34.0" prefWidth="156.0" styleClass="Enter" stylesheets="@New%20Text%20Document.css" text="Next">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <RadioButton fx:id="rdo1" layoutX="537.0" layoutY="365.0" mnemonicParsing="false" text="1" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="amountGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdo2" layoutX="680.0" layoutY="365.0" mnemonicParsing="false" text="2" textFill="WHITE" toggleGroup="$amountGroup">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="moreRdo" layoutX="857.0" layoutY="363.0" mnemonicParsing="false" text="More" textFill="WHITE" toggleGroup="$amountGroup">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="ironRdo" layoutX="537.0" layoutY="422.0" mnemonicParsing="false" text="Iron" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="typeGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="mirrorRdo" layoutX="680.0" layoutY="422.0" mnemonicParsing="false" text="Mirror" textFill="WHITE" toggleGroup="$typeGroup">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="woodRdo" layoutX="859.0" layoutY="422.0" mnemonicParsing="false" text="Wood" textFill="WHITE" toggleGroup="$typeGroup">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="irondoorRdo" layoutX="537.0" layoutY="480.0" mnemonicParsing="false" text="Iron" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="DtypeGroup" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="frenchRdo" layoutX="680.0" layoutY="480.0" mnemonicParsing="false" text="French door" textFill="WHITE" toggleGroup="$DtypeGroup">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="otherRdo" layoutX="861.0" layoutY="477.0" mnemonicParsing="false" text="Other" textFill="WHITE" toggleGroup="$DtypeGroup">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </RadioButton>
+                  <TextField fx:id="txt_houseNumber" layoutX="407.0" layoutY="203.0" prefHeight="38.0" prefWidth="244.0" promptText="House Number" styleClass="Housetext" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_SurfaceArea" layoutX="407.0" layoutY="252.0" prefHeight="38.0" prefWidth="244.0" promptText="Surface Area (Square)" styleClass="Housetext" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_motherFullName" layoutX="877.0" layoutY="146.0" prefHeight="38.0" prefWidth="244.0" promptText="Mother Full Name" styleClass="Housetext" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_AmountOfRoom" layoutX="877.0" layoutY="203.0" prefHeight="38.0" prefWidth="244.0" promptText="Amount Of Room" styleClass="Housetext" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_HouseLocation" layoutX="877.0" layoutY="260.0" prefHeight="38.0" prefWidth="244.0" promptText="House Location" styleClass="Housetext" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lbl_valid" layoutX="387.0" layoutY="525.0" onMouseClicked="#handleButton" prefHeight="60.0" prefWidth="234.0" wrapText="true" />
+                  <ImageView fx:id="img_back2" fitHeight="34.0" fitWidth="35.0" layoutX="20.0" layoutY="27.0" onMouseClicked="#backButon" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="13.0">
+                     <image>
+                        <Image url="@pixlr-bg-result(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pn_childrenStatus" layoutX="10.0" layoutY="10.0" prefHeight="654.0" prefWidth="1162.0" styleClass="Id" stylesheets="@New%20Text%20Document.css">
+               <children>
+                  <Label fx:id="pn_ChildrenStatus11" alignment="CENTER" layoutX="334.0" layoutY="14.0" prefHeight="27.0" prefWidth="220.0" text="Children Status" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox fx:id="choiceB_Nchild" layoutX="324.0" layoutY="91.0" onMouseClicked="#handleButton" prefWidth="150.0" />
+                  <Label layoutX="101.0" layoutY="84.0" prefHeight="38.0" prefWidth="162.0" text="Number Of Children" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="113.0" layoutY="142.0" prefHeight="26.0" prefWidth="121.0" text="Full Name" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="357.0" layoutY="142.0" prefHeight="25.0" prefWidth="71.0" text="Gender" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="957.0" layoutY="129.0" prefHeight="17.0" prefWidth="84.0" text="Status" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="mRdo1" layoutX="312.0" layoutY="179.0" mnemonicParsing="false" text="Male" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childG1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fRdo1" layoutX="429.0" layoutY="179.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$childG1" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="mRdo2" layoutX="314.0" layoutY="223.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="63.0" text="Male" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="397.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childG2" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fRdo2" layoutX="426.0" layoutY="224.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$childG2" visible="false" AnchorPane.bottomAnchor="396.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="mRdo3" layoutX="313.0" layoutY="265.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="60.0" text="Male" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="355.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childG3" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fRdo3" layoutX="426.0" layoutY="266.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$childG3" visible="false" AnchorPane.bottomAnchor="354.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="mRdo4" layoutX="312.0" layoutY="310.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="68.0" text="Male" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="310.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childG4" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fRdo4" layoutX="426.0" layoutY="308.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$childG4" visible="false" AnchorPane.bottomAnchor="312.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="mRdo5" layoutX="312.0" layoutY="357.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="68.0" text="Male" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="263.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childG5" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fRdo5" layoutX="426.0" layoutY="356.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$childG5" visible="false" AnchorPane.bottomAnchor="264.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="mRdo6" layoutX="311.0" layoutY="402.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="63.0" text="Male" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="218.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childG6" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fRdo6" layoutX="426.0" layoutY="401.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$childG6" visible="false" AnchorPane.bottomAnchor="219.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="mRdo7" layoutX="311.0" layoutY="448.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="68.0" text="Male" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="172.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childG7" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fRdo7" layoutX="426.0" layoutY="448.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$childG7" visible="false" AnchorPane.bottomAnchor="172.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="mRdo8" layoutX="311.0" layoutY="496.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="63.0" text="Male" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="124.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childG8" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fRdo8" layoutX="426.0" layoutY="496.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$childG8" visible="false" AnchorPane.bottomAnchor="124.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="mRdo9" layoutX="308.0" layoutY="544.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="68.0" text="Male" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="76.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childG9" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fRdo9" layoutX="426.0" layoutY="541.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$childG9" visible="false" AnchorPane.bottomAnchor="79.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="mRdo10" layoutX="309.0" layoutY="588.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="62.0" text="Male" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="32.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childG10" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="fRdo10" layoutX="425.0" layoutY="586.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$childG10" visible="false" AnchorPane.bottomAnchor="34.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <TextField fx:id="txt_fN1" layoutX="88.0" layoutY="172.0" prefHeight="34.0" prefWidth="175.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fN2" layoutX="88.0" layoutY="217.0" prefHeight="34.0" prefWidth="175.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="390.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fN3" layoutX="87.0" layoutY="264.0" prefHeight="36.0" prefWidth="175.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="341.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fN4" layoutX="87.0" layoutY="313.0" prefHeight="34.0" prefWidth="175.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="294.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fN5" layoutX="86.0" layoutY="359.0" prefHeight="35.0" prefWidth="175.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="247.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fN6" layoutX="84.0" layoutY="404.0" prefHeight="36.0" prefWidth="175.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="201.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fN7" layoutX="84.0" layoutY="451.0" prefHeight="34.0" prefWidth="175.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="156.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fN8" layoutX="84.0" layoutY="494.0" prefHeight="36.0" prefWidth="175.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="111.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fN9" layoutX="84.0" layoutY="541.0" prefHeight="36.0" prefWidth="175.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="64.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fN10" layoutX="84.0" layoutY="587.0" prefHeight="33.0" prefWidth="175.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="21.0" AnchorPane.topAnchor="587.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <Button fx:id="btn_done" layoutX="1136.0" layoutY="575.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="38.0" prefWidth="133.0" styleClass="Enter" stylesheets="@New%20Text%20Document.css" text="Done">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <TextField fx:id="txt_Age1" layoutX="550.0" layoutY="172.0" prefHeight="34.0" prefWidth="75.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_car1" layoutX="687.0" layoutY="173.0" prefHeight="34.0" prefWidth="185.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_Age2" layoutX="550.0" layoutY="217.0" prefHeight="34.0" prefWidth="75.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="390.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_car2" layoutX="687.0" layoutY="217.0" prefHeight="34.0" prefWidth="185.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="390.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_Age3" layoutX="550.0" layoutY="261.0" prefHeight="34.0" prefWidth="75.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="346.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_car3" layoutX="687.0" layoutY="262.0" prefHeight="34.0" prefWidth="185.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="345.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_Age4" layoutX="550.0" layoutY="304.0" prefHeight="34.0" prefWidth="75.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="303.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_car4" layoutX="687.0" layoutY="307.0" prefHeight="34.0" prefWidth="185.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="300.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_Age5" layoutX="550.0" layoutY="347.0" prefHeight="34.0" prefWidth="75.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="260.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_car5" layoutX="687.0" layoutY="350.0" prefHeight="34.0" prefWidth="185.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="257.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_Age6" layoutX="550.0" layoutY="392.0" prefHeight="34.0" prefWidth="75.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="215.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_car6" layoutX="687.0" layoutY="394.0" prefHeight="34.0" prefWidth="185.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="213.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_Age7" layoutX="550.0" layoutY="437.0" prefHeight="34.0" prefWidth="75.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="170.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_car7" layoutX="687.0" layoutY="438.0" prefHeight="34.0" prefWidth="185.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="169.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_Age8" layoutX="550.0" layoutY="481.0" prefHeight="34.0" prefWidth="75.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="126.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_car8" layoutX="687.0" layoutY="481.0" prefHeight="34.0" prefWidth="185.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="126.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_Age9" layoutX="550.0" layoutY="524.0" prefHeight="34.0" prefWidth="75.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="83.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_car9" layoutX="687.0" layoutY="523.0" prefHeight="34.0" prefWidth="185.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="84.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_Age10" layoutX="550.0" layoutY="568.0" prefHeight="34.0" prefWidth="75.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="39.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_car10" layoutX="687.0" layoutY="567.0" prefHeight="34.0" prefWidth="185.0" styleClass="StatusText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="40.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font></TextField>
+                  <RadioButton fx:id="sRdo1" layoutX="900.0" layoutY="180.0" mnemonicParsing="false" text="Single" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childS1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="marrRdo1" layoutX="992.0" layoutY="180.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Marriage" textFill="WHITE" toggleGroup="$childS1" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="sRdo2" layoutX="900.0" layoutY="223.0" mnemonicParsing="false" text="Single" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="397.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childS2" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="marrRdo2" layoutX="992.0" layoutY="223.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Marriage" textFill="WHITE" toggleGroup="$childS2" visible="false" AnchorPane.bottomAnchor="397.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="sRdo3" layoutX="900.0" layoutY="269.0" mnemonicParsing="false" text="Single" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="351.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childS3" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="marrRdo3" layoutX="992.0" layoutY="268.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Marriage" textFill="WHITE" toggleGroup="$childS3" visible="false" AnchorPane.bottomAnchor="352.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="sRdo4" layoutX="900.0" layoutY="311.0" mnemonicParsing="false" text="Single" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="309.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childS4" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="marrRdo4" layoutX="992.0" layoutY="311.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Marriage" textFill="WHITE" toggleGroup="$childS4" visible="false" AnchorPane.bottomAnchor="309.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="sRdo5" layoutX="900.0" layoutY="356.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="84.0" text="Single" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="264.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childS5" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="marrRdo5" layoutX="992.0" layoutY="357.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Marriage" textFill="WHITE" toggleGroup="$childS5" visible="false" AnchorPane.bottomAnchor="263.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="sRdo6" layoutX="900.0" layoutY="399.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="84.0" text="Single" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="221.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childS6" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="marrRdo6" layoutX="992.0" layoutY="399.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Marriage" textFill="WHITE" toggleGroup="$childS6" visible="false" AnchorPane.bottomAnchor="221.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="sRdo7" layoutX="900.0" layoutY="445.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="84.0" text="Single" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="175.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childS7" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="marrRdo7" layoutX="992.0" layoutY="445.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Marriage" textFill="WHITE" toggleGroup="$childS7" visible="false" AnchorPane.bottomAnchor="175.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="sRdo8" layoutX="900.0" layoutY="487.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="84.0" text="Single" textFill="#fffdfd" visible="false" AnchorPane.bottomAnchor="133.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childS8" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="marrRdo8" layoutX="992.0" layoutY="487.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Marriage" textFill="#fffbfb" toggleGroup="$childS8" visible="false" AnchorPane.bottomAnchor="133.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="sRdo9" layoutX="899.0" layoutY="530.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="84.0" text="Single" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="90.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childS9" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="marrRdo9" layoutX="992.0" layoutY="530.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Marriage" textFill="WHITE" toggleGroup="$childS9" visible="false" AnchorPane.bottomAnchor="90.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="sRdo10" layoutX="899.0" layoutY="576.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="84.0" text="Single" textFill="WHITE" visible="false" AnchorPane.bottomAnchor="44.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="childS10" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="marrRdo10" layoutX="992.0" layoutY="574.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="99.0" text="Marriage" textFill="WHITE" toggleGroup="$childS10" visible="false" AnchorPane.bottomAnchor="46.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <Label layoutX="565.0" layoutY="129.0" prefHeight="26.0" prefWidth="45.0" text="Age" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="732.0" layoutY="132.0" prefHeight="25.0" prefWidth="71.0" text="Carrier" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="img_back4" fitHeight="34.0" fitWidth="35.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#backButon" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="553.0" AnchorPane.topAnchor="13.0">
+                     <image>
+                        <Image url="@pixlr-bg-result(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="392.0" layoutY="59.0" prefHeight="21.0" prefWidth="108.0" text="House Number" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_HouseNumbers" layoutX="532.0" layoutY="57.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lbl_childrenSucessful" layoutX="1091.0" layoutY="519.0" prefHeight="44.0" prefWidth="244.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pn_House" prefHeight="200.0" prefWidth="200.0" styleClass="Id" stylesheets="@New%20Text%20Document.css">
+               <children>
+                  <Label layoutX="386.0" layoutY="21.0" prefHeight="38.0" prefWidth="96.0" text="House" textFill="WHITE">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_HFatherName" layoutX="943.0" layoutY="87.0" prefHeight="33.0" prefWidth="234.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="799.0" layoutY="74.0" prefHeight="26.0" prefWidth="133.0" text="Father Full Name" textFill="#fffdfd">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="797.0" layoutY="153.0" prefHeight="26.0" prefWidth="142.0" text="Mother Full Name" textFill="#fffdfd">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_HMatherName" layoutX="945.0" layoutY="150.0" prefHeight="33.0" prefWidth="234.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="799.0" layoutY="221.0" prefHeight="26.0" prefWidth="130.0" text="House Number" textFill="#fffdfd">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_HhouseNumber" layoutX="1003.0" layoutY="212.0" prefHeight="33.0" prefWidth="174.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="803.0" layoutY="352.0" prefHeight="26.0" prefWidth="142.0" text="House P.Number" textFill="#fffdfd">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_HPNumber" layoutX="1004.0" layoutY="340.0" prefHeight="27.0" prefWidth="174.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <ChoiceBox fx:id="choiceBHouseChilde" layoutX="453.0" layoutY="108.0" prefWidth="150.0" />
+                  <Label layoutX="239.0" layoutY="108.0" prefHeight="26.0" prefWidth="149.0" text="Number Of Kids" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="77.0" layoutY="166.0" prefHeight="21.0" prefWidth="84.0" text="Name" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="422.0" layoutY="166.0" prefHeight="21.0" prefWidth="63.0" text="Gender" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_HName1" layoutX="77.0" layoutY="202.0" prefHeight="33.0" prefWidth="187.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="426.0" AnchorPane.topAnchor="202.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_HName2" layoutX="77.0" layoutY="245.0" prefHeight="33.0" prefWidth="187.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="380.0" AnchorPane.topAnchor="245.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_HName3" layoutX="78.0" layoutY="290.0" prefHeight="34.0" prefWidth="185.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="337.0" AnchorPane.topAnchor="290.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_HName4" layoutX="78.0" layoutY="335.0" prefHeight="35.0" prefWidth="185.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false" AnchorPane.bottomAnchor="291.0" AnchorPane.topAnchor="335.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_HName5" layoutX="77.0" layoutY="378.0" prefHeight="30.0" prefWidth="187.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_HName6" layoutX="78.0" layoutY="420.0" prefHeight="27.0" prefWidth="185.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets top="-2.0" />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="txt_HName7" layoutX="77.0" layoutY="462.0" prefHeight="33.0" prefWidth="187.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt_HName8" layoutX="77.0" layoutY="508.0" prefHeight="31.0" prefWidth="187.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <opaqueInsets>
+                        <Insets top="-2.0" />
+                     </opaqueInsets>
+                  </TextField>
+                  <TextField fx:id="txt_HName9" layoutX="77.0" layoutY="549.0" prefHeight="34.0" prefWidth="187.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false" />
+                  <TextField fx:id="txt_HName10" layoutX="77.0" layoutY="591.0" prefHeight="33.0" prefWidth="187.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets top="-2.0" />
+                     </opaqueInsets>
+                  </TextField>
+                  <Label layoutX="799.0" layoutY="274.0" prefHeight="26.0" prefWidth="156.0" text="File Submission Date" textFill="#fffdfd">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="datePickerHFile" layoutX="1004.0" layoutY="275.0" />
+                  <Label layoutX="626.0" layoutY="166.0" prefHeight="26.0" prefWidth="36.0" text="Age" textFill="#fffdfd">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="rdoHmale1" layoutX="332.0" layoutY="208.0" mnemonicParsing="false" text="Male" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderChild1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHfemal1" layoutX="479.0" layoutY="211.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$genderChild1" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHmale2" layoutX="332.0" layoutY="248.0" mnemonicParsing="false" text="Male" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderChild2" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHfemal2" layoutX="479.0" layoutY="251.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$genderChild2" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHmale3" layoutX="332.0" layoutY="296.0" mnemonicParsing="false" text="Male" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderChild3" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHfemal3" layoutX="479.0" layoutY="298.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$genderChild3" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHmale4" layoutX="332.0" layoutY="340.0" mnemonicParsing="false" text="Male" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderChild4" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHfemal4" layoutX="479.0" layoutY="343.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="75.0" text="Female" textFill="WHITE" toggleGroup="$genderChild4" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHmale5" layoutX="332.0" layoutY="384.0" mnemonicParsing="false" text="Male" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderChild5" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHfemal5" layoutX="479.0" layoutY="383.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="75.0" text="Female" textFill="WHITE" toggleGroup="$genderChild5" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHmale6" layoutX="332.0" layoutY="426.0" mnemonicParsing="false" text="Male" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderChild6" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHfemal6" layoutX="479.0" layoutY="426.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="75.0" text="Female" textFill="WHITE" toggleGroup="$genderChild6" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHmale7" layoutX="332.0" layoutY="468.0" mnemonicParsing="false" text="Male" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderChild7" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHfemal7" layoutX="479.0" layoutY="468.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="75.0" text="Female" textFill="WHITE" toggleGroup="$genderChild7" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHmale8" layoutX="332.0" layoutY="512.0" mnemonicParsing="false" text="Male" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderChild8" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHfemal8" layoutX="479.0" layoutY="513.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="75.0" text="Female" textFill="WHITE" toggleGroup="$genderChild8" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHmale9" layoutX="332.0" layoutY="555.0" mnemonicParsing="false" text="Male" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderChild9" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHfemal9" layoutX="479.0" layoutY="553.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="75.0" text="Female" textFill="WHITE" toggleGroup="$genderChild9" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHmale10" layoutX="332.0" layoutY="597.0" mnemonicParsing="false" text="Male" textFill="WHITE" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="genderChild10" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoHfemal10" layoutX="479.0" layoutY="597.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="75.0" text="Female" textFill="WHITE" toggleGroup="$genderChild10" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <TextField fx:id="rdoHAge1" layoutX="617.0" layoutY="205.0" prefHeight="27.0" prefWidth="54.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="rdoHAge2" layoutX="617.0" layoutY="246.0" prefHeight="25.0" prefWidth="54.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="rdoHAge3" layoutX="617.0" layoutY="290.0" prefHeight="25.0" prefWidth="54.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="rdoHAge4" layoutX="617.0" layoutY="334.0" prefHeight="25.0" prefWidth="54.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="rdoHAge5" layoutX="617.0" layoutY="377.0" prefHeight="25.0" prefWidth="54.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="rdoHAge6" layoutX="617.0" layoutY="420.0" prefHeight="25.0" prefWidth="54.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="rdoHAge7" layoutX="617.0" layoutY="462.0" prefHeight="25.0" prefWidth="54.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="rdoHAge8" layoutX="617.0" layoutY="507.0" prefHeight="25.0" prefWidth="54.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="rdoHAge9" layoutX="617.0" layoutY="549.0" prefHeight="26.0" prefWidth="54.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="rdoHAge10" layoutX="617.0" layoutY="591.0" prefHeight="33.0" prefWidth="54.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css" visible="false">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="lbl_errorHouse" layoutX="771.0" layoutY="514.0" prefHeight="38.0" prefWidth="289.0" />
+                  <Button fx:id="btn_SubmitHouse" layoutX="1080.0" layoutY="522.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="36.0" prefWidth="122.0" styleClass="Enter" stylesheets="@New%20Text%20Document.css" text="Submit">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="img_back1" fitHeight="38.0" fitWidth="36.0" layoutX="26.0" layoutY="23.0" onMouseClicked="#backButon" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pixlr-bg-result(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbl_HouseSucessful" layoutX="785.0" layoutY="504.0" prefHeight="44.0" prefWidth="277.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pn_id" prefHeight="600.0" prefWidth="800.0" styleClass="Id" stylesheets="@New%20Text%20Document.css">
+               <children>
+                  <Button fx:id="btn_idSubmit" layoutX="397.0" layoutY="579.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="38.0" prefWidth="133.0" styleClass="Enter" stylesheets="@New%20Text%20Document.css" text="Add">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Button>
+                  <TextField fx:id="txt_regNumber" layoutX="353.0" layoutY="133.0" prefHeight="36.0" prefWidth="207.0" promptText="Register Number" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <Label alignment="CENTER" layoutX="337.0" layoutY="449.0" prefHeight="26.0" prefWidth="264.0" text="Emergency Contact" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="331.0" layoutY="59.0" prefHeight="25.0" prefWidth="264.0" text="Resident ID Card" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_resFname" layoutX="63.0" layoutY="210.0" prefHeight="36.0" prefWidth="207.0" promptText="First Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_resIdNumber" layoutX="63.0" layoutY="281.0" prefHeight="36.0" prefWidth="207.0" promptText="ID Number" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_resAdress" layoutX="63.0" layoutY="402.0" prefHeight="36.0" prefWidth="207.0" promptText="Resident Address" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_resMname" layoutX="353.0" layoutY="210.0" prefHeight="36.0" prefWidth="220.0" promptText="Middle Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_resLname" layoutX="661.0" layoutY="210.0" prefHeight="36.0" prefWidth="207.0" promptText="Last Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_resBloodGroup" layoutX="661.0" layoutY="273.0" prefHeight="36.0" prefWidth="207.0" promptText="Blood Group" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_resPhoneNumber" layoutX="359.0" layoutY="402.0" prefHeight="40.0" prefWidth="220.0" promptText="Phone Number" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_resHouseNumber" layoutX="661.0" layoutY="402.0" prefHeight="40.0" prefWidth="213.0" promptText="House Number" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_EmgFName" layoutX="63.0" layoutY="495.0" prefHeight="36.0" prefWidth="207.0" promptText="First Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_EmgMName" layoutX="359.0" layoutY="495.0" prefHeight="36.0" prefWidth="220.0" promptText="Middle Name" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_EmgLName" layoutX="661.0" layoutY="492.0" prefHeight="40.0" prefWidth="213.0" promptText="LastName" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="tex_EmgPNumber" layoutX="974.0" layoutY="491.0" prefHeight="36.0" prefWidth="207.0" promptText="Phone Number" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <ImageView fx:id="img_idCard" fitHeight="150.0" fitWidth="220.0" layoutX="66.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="lbl_errorIdCard" layoutX="457.0" layoutY="535.0" prefHeight="44.0" prefWidth="307.0" />
+                  <Button fx:id="btn_chooseIdPhoto" layoutX="119.0" layoutY="172.0" mnemonicParsing="false" onMouseClicked="#handleButton" style="-fx-background-color: #2b4de2;" text="Choose User Image" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font></Button>
+                  <ImageView fx:id="img_backId" fitHeight="60.0" fitWidth="27.0" layoutX="35.0" layoutY="25.0" onMouseClicked="#backButon" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="556.0" AnchorPane.topAnchor="25.0">
+                     <image>
+                        <Image url="@pixlr-bg-result(1).png" />
+                     </image>
+                  </ImageView>
+                  <DatePicker fx:id="datePickerExpire" layoutX="661.0" layoutY="343.0" prefHeight="34.0" prefWidth="207.0" promptText="Expire Date      DD/MM/YY" />
+                  <Label layoutX="63.0" layoutY="357.0" text="Sex" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <RadioButton fx:id="id_male" layoutX="111.0" layoutY="360.0" mnemonicParsing="false" text="Male" textFill="WHITE">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="chooseM" />
+                     </toggleGroup>
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="id_female" layoutX="184.0" layoutY="360.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$chooseM">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </RadioButton>
+                  <DatePicker fx:id="datePickerIssue" layoutX="356.0" layoutY="353.0" prefHeight="34.0" prefWidth="213.0" promptText="Issue Date       DD/MM/YY" />
+                  <DatePicker fx:id="datePickerBirth" layoutX="356.0" layoutY="284.0" prefHeight="34.0" prefWidth="213.0" promptText="Date Of Birth      DD/MM/YY" />
+                  <ImageView fx:id="imageQR" fitHeight="150.0" fitWidth="200.0" layoutX="1068.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btn_Generator" layoutX="1087.0" layoutY="172.0" mnemonicParsing="false" onMouseClicked="#clickdbutton" prefHeight="38.0" prefWidth="162.0" styleClass="Enter" stylesheets="@New%20Text%20Document.css" text="Generator">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Button>
+                  <Button fx:id="byn_update" layoutX="675.0" layoutY="579.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="38.0" prefWidth="150.0" styleClass="Enter" stylesheets="@New%20Text%20Document.css" text="Update">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Button>
+                  <Label layoutX="46.0" layoutY="174.0" prefHeight="17.0" prefWidth="60.0" text="220 *150" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="pn_birthCerteficate" prefHeight="600.0" prefWidth="800.0" styleClass="Id" stylesheets="@New%20Text%20Document.css">
+               <children>
+                  <Label alignment="TOP_LEFT" layoutX="442.0" layoutY="42.0" prefHeight="74.0" prefWidth="466.0" text="Federal Democratic Republic Of Ethiopia Besic Events Register" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="92.0" layoutY="251.0" prefHeight="26.0" prefWidth="108.0" text="Child Name" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt_childName" layoutX="243.0" layoutY="240.0" prefHeight="27.0" prefWidth="156.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="18.0" />
+                     </font></TextField>
+                  <Label layoutX="503.0" layoutY="251.0" prefHeight="25.0" prefWidth="99.0" text="Father Name" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="917.0" layoutY="251.0" prefHeight="26.0" prefWidth="121.0" text="Grand.F Name" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="94.0" layoutY="314.0" prefHeight="25.0" prefWidth="68.0" text="Gender" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="505.0" layoutY="318.0" prefHeight="25.0" prefWidth="71.0" text="BirthDay" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="86.0" layoutY="372.0" prefHeight="25.0" prefWidth="84.0" text="BirthPlace" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="499.0" layoutY="377.0" prefHeight="25.0" prefWidth="84.0" text="Nationality" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="850.0" layoutY="386.0" prefHeight="26.0" prefWidth="142.0" text="Mother FullName" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="499.0" layoutY="443.0" prefHeight="26.0" prefWidth="130.0" text="Father FullName" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="80.0" layoutY="438.0" prefHeight="26.0" prefWidth="142.0" text="Mother Nationality" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="911.0" layoutY="452.0" prefHeight="26.0" prefWidth="142.0" text="Father Nationality" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="80.0" layoutY="561.0" prefHeight="26.0" prefWidth="133.0" text="Certificate Given" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="80.0" layoutY="505.0" prefHeight="26.0" prefWidth="142.0" text="BirtDay Regestor  " textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="492.0" layoutY="505.0" prefHeight="25.0" prefWidth="220.0" text="BirthDay File form Number" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="485.0" layoutY="562.0" prefHeight="26.0" prefWidth="264.0" text="BirthDay Register  Unique Number" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="576.0" layoutY="146.0" prefHeight="60.0" prefWidth="199.0" text="BirthDay  Certificate  Paper" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dpicker_birth" layoutX="633.0" layoutY="319.0" promptText="DD/MM/YY" />
+                  <DatePicker fx:id="dPicker_bDayRegistor" layoutX="238.0" layoutY="508.0" promptText="DD/MM/YY" />
+                  <DatePicker fx:id="dPicker_certifGiven" layoutX="234.0" layoutY="563.0" promptText="DD/MM/YY" />
+                  <ImageView fitHeight="82.0" fitWidth="122.0" layoutX="728.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button fx:id="btn_bDaySubmit" layoutX="1201.0" layoutY="573.0" mnemonicParsing="false" onMouseClicked="#handleButton" prefHeight="38.0" prefWidth="122.0" styleClass="Enter" stylesheets="@New%20Text%20Document.css" text="Submit">
+                     <font>
+                        <Font size="17.0" />
+                     </font></Button>
+                  <Button fx:id="btn_choose" layoutX="72.0" layoutY="219.0" mnemonicParsing="false" onMouseClicked="#handleButton" style="-fx-background-color: #2752e6;" text="Choose User  Photo" textFill="WHITE" />
+                  <ImageView fx:id="img_user" fitHeight="158.0" fitWidth="213.0" layoutX="21.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fitHeight="82.0" fitWidth="122.0" layoutX="977.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@download.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="82.0" fitWidth="122.0" layoutX="268.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@istockphoto-1309826577-170667a.jpg" />
+                     </image>
+                  </ImageView>
+                  <TextField fx:id="txt_fName" layoutX="639.0" layoutY="240.0" prefHeight="27.0" prefWidth="162.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_gName" layoutX="1071.0" layoutY="240.0" prefHeight="27.0" prefWidth="162.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_birthPlace" layoutX="233.0" layoutY="369.0" prefHeight="27.0" prefWidth="156.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_mFullName" layoutX="992.0" layoutY="383.0" prefHeight="40.0" prefWidth="244.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fFullName" layoutX="635.0" layoutY="437.0" prefHeight="33.0" prefWidth="244.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_nationality" layoutX="639.0" layoutY="374.0" prefHeight="27.0" prefWidth="162.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_mNationality" layoutX="248.0" layoutY="435.0" prefHeight="27.0" prefWidth="162.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_fNationality" layoutX="1053.0" layoutY="444.0" prefHeight="27.0" prefWidth="162.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_bDayFile" layoutX="749.0" layoutY="502.0" prefHeight="27.0" prefWidth="162.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <TextField fx:id="txt_bDayUnique" layoutX="749.0" layoutY="556.0" prefHeight="27.0" prefWidth="162.0" styleClass="IdText" stylesheets="@New%20Text%20Document.css">
+                     <font>
+                        <Font size="17.0" />
+                     </font></TextField>
+                  <Label fx:id="lbl_error" layoutX="915.0" layoutY="562.0" prefHeight="50.0" prefWidth="277.0" wrapText="true" />
+                  <ImageView fx:id="img_back3" fitHeight="34.0" fitWidth="35.0" layoutX="19.0" layoutY="14.0" onMouseClicked="#backButon" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="553.0" AnchorPane.topAnchor="13.0">
+                     <image>
+                        <Image url="@pixlr-bg-result(1).png" />
+                     </image>
+                  </ImageView>
+                  <RadioButton fx:id="rdoMale" layoutX="243.0" layoutY="317.0" mnemonicParsing="false" text="Male" textFill="WHITE">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="chooseF" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoFemale" layoutX="352.0" layoutY="318.0" mnemonicParsing="false" text="Female" textFill="WHITE" toggleGroup="$chooseF">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </RadioButton>
+                  <Label layoutX="5.0" layoutY="221.0" prefHeight="17.0" prefWidth="68.0" text="213 * 158" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

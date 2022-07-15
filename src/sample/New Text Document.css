@@ -1,0 +1,56 @@
+.Enter{
+-fx-background-radius: 15px;
+-fx-text-fill: #ffffff;
+-fx-background-color: #250981;
+}
+.Enter:hover{
+-fx-background-color: #9af3f2;
+-fx-text-fill: black;
+}
+.TextField{
+-fx-prompt-text-fill: #ffffff; 
+-fx-text-inner-color: #ffffff;
+-fx-border-color:#ffffff;
+-fx-background-color: transparent;
+-fx-border-width: 0px 0px 2px 0px;
+}
+
+//Identification
+.Id{
+-fx-background-color: linear-gradient(to top,#2a4fe4,#2f0086);
+}
+.IdText{
+ -fx-text-inner-color: #ffffff;
+-fx-background-color:transparent;
+-fx-border-color : black;
+ -fx-border-width: 0px 0px 2px 0px;
+}
+//kebele form
+.KebeleButton{
+ -fx-background-radius: 10px;
+-fx-background-color: #9af3f2;
+-fx-text-fill: #0a0426;
+}
+.KebeleForm{
+-fx-background-color: linear-gradient(to left,#002f96,#2968b7);
+}
+.KebeleButton:hover{
+  -fx-background-color:#2f0086;
+  -fx-text-fill: #ffffff;
+} 
+//House
+.Housetext{
+-fx-text-fill: #ffffff;
+-fx-background-color:transparent;
+}
+.Housetext:hover{
+-fx-border-color : black;
+-fx-border-width: 0px 0px 2px 0px;
+}
+//Children Status
+.StatusText{
+-fx-text-inner-color: #ffffff;
+-fx-background-color:transparent;
+-fx-border-color : black;
+-fx-border-width: 0px 0px 2px 0px;
+}
